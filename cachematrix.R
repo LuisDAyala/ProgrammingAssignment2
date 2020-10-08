@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+#The first function, create a new object that store the value of the matrix 
+#given as an argument as well as four functions. The second function take an 
+#object created by the first function and evaluate if there is a inverse´s
+#matrix already calculate and print it if it is the case, if not, calculate the
+#inverse´s matrix, print it and saved it inside the object given as an argument.
 
 makeCacheMatrix <- function(x = matrix()) {
         Inv<- NULL
@@ -18,8 +19,6 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
 cacheSolve <- function(x, ...) {
         Inv<-x$getInv()
         if (!is.null(Inv)){
@@ -30,5 +29,4 @@ cacheSolve <- function(x, ...) {
         Inv<-solve(data, ...)
         x$setInv(Inv)
         Inv
-        ## Return a matrix that is the inverse of 'x'
 }
